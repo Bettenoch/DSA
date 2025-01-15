@@ -1,12 +1,24 @@
-def lastZeros(arr):
-    count = 0
-    for i in range(len(arr)):
-        if arr[i] != 0:
-            arr[i], arr[count] = arr[count], arr[i]
-            count += 1
-            
-    return arr
+def has_duplicates(arr):
+    """
+    Check if there are duplicates in the array.
 
+    Parameters:
+    arr (list): The input array.
 
-arr = [3, 5, 0, 9, 0, 11, 99, 0, 11]
-print(lastZeros(arr))
+    Returns:
+    bool: True if duplicates are found, otherwise False.
+    """
+    seen = set()  # Set to store unique elements
+    for num in arr:
+        
+        if num in seen:
+            return True  # Duplicate found
+        
+        seen.add(num)  # Add the number to the set
+        
+    return False  # No duplicates found
+
+arr = [1, 4, 5, 6]
+print (arr[:2+1])
+print(has_duplicates(arr))
+
