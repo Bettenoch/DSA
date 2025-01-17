@@ -19,6 +19,21 @@ def has_duplicates(arr):
     return False  # No duplicates found
 
 arr = [1, 4, 5, 6]
-print (arr[:2+1])
-print(has_duplicates(arr))
+
+
+
+def test2(arr=[], word=str):
+    final = set()
+    for i in range(len(word)):
+        for string in arr:
+            if string[i] == word[i]:
+                final.add(string[i])
+    return final
+    
+arr = ["flower", "flow", "flight"] 
+word = "flow"
+
+print(test2(arr, word))   
+# print (arr[:2+1])
+# print(has_duplicates(arr))
 
