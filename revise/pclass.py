@@ -1,5 +1,5 @@
 
-import collections
+import collections_test
 
 Card = collections.namedtuple('Card', ['rank', 'suits'])
 
