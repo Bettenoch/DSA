@@ -11,12 +11,13 @@ def insert_key(root, key):
         index = ord(c) - ord('a')
         if curr.child[index] is None:
             new_node = TrieNode()
-
+            # keep track of the newly created node
             curr.child[index] = new_node
         # set pointer to the new node
 
         curr = curr.child[index]
 
+    # mark the end of the created node
     curr.word_end = True
 
 
